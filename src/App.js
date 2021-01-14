@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, useState } from 'react';
+import styled from 'styled-components';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import AddCategory from './components/AddCategory';
+import SetCategory from './components/SetCategory';
+
+const App = () => {
+
+  const [ categories, setCategories ] = useState(['One Punch']);
+
+  const H2 = styled.h2`
+    color: #38C98D;
+    font-weight: 900px;
+    font-size: 25px;
+    text-align: center;
+  `
+
+  return(
+
+    <Fragment>
+
+      <H2>My First App!</H2>
+
+      <AddCategory setCategories = { setCategories } />
+
+      <hr />
+
+      <ol>
+        {
+          categories.map( ( category ) => <SetCategory key = { category.toString() } category = { category } />)
+        }
+      </ol>
+
+    </Fragment>
+
+  )
+
 }
 
 export default App;
