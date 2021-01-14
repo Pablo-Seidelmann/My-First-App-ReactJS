@@ -66,7 +66,8 @@ const AddCategory = ({ setCategories }) => {
 
         <Form onSubmit = { handleSubmit } >
             
-            <Input 
+            <Input
+                id = 'Input-Category' 
                 type = 'text'
                 value = { inputValue }
                 onChange = { handleInputChange }

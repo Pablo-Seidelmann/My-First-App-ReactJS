@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas al Componente <AddCategory /> SnapShot al Componente 1`] = `
+<styled.form
+  onSubmit={[Function]}
+>
+  <styled.input
+    id="Input-Category"
+    onChange={[Function]}
+    type="text"
+    value="Escribe Aca!"
+  />
+  <styled.div>
+    <styled.button
+      primary={true}
+      type="submit"
+    >
+      Enviar
+    </styled.button>
+    <styled.button
+      hover={true}
+      type="reset"
+    >
+      Cancelar
+    </styled.button>
+  </styled.div>
+</styled.form>
+`;
