@@ -18,7 +18,7 @@ const SetCategory = ({ category }) => {
 
         <Div>
             
-            <Li>
+            <Li id = 'list-item'>
                 { category }
             </Li>
 
