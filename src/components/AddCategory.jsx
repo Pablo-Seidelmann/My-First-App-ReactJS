@@ -73,7 +73,7 @@ const AddCategory = ({ setCategories }) => {
                 onChange = { handleInputChange }
             />
 
-            <p>{ inputValue }</p> {/* Despues Borrar! */}
+            {/* <p>{ inputValue }</p> Despues Borrar! */}
 
             <DivButton>
 
