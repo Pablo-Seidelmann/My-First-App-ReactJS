@@ -1,46 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import swal from 'sweetalert';
 
+import './AddCategory.css'
+
 const AddCategory = ({ setCategories }) => {
-
-    const Form = styled.form`
-        margin: 50px;
-        text-align: center;
-    `
-
-    const Input = styled.input`
-        color: grey;
-        border-radius: 20px;
-        border: 1px solid #38C98D;
-        font-weight: bold;
-        font-size: 15px;
-        padding: 40px;
-        text-align: center;
-    `
-
-    const Button = styled.button`
-        border-radius: 5px;
-        border: 1px solid grey;
-        background-color: ${ props => props.primary ? '#38C98D' : 'grey' };
-        font-weight: bold;
-        color: #fff;
-        margin-left: 10px;
-        padding: 8px 20px; 
-
-        &:hover
-        {
-            background-color: ${ props => props.hover ? '#808090' : null };
-            transition: 1.5s;
-        }
-    `
-
-    const DivButton = styled.div`
-        position: relative;
-        text-align: center;
-        top: 20px;
-    `
+    
 
     const [ inputValue, setInputValue ] = useState( 'Escribe Aca!' );
 
@@ -64,26 +29,26 @@ const AddCategory = ({ setCategories }) => {
     
     return (
 
-        <Form id = 'Form-Category' onSubmit = { handleSubmit } >
+        <form className = 'form-category' onSubmit = { handleSubmit } >
             
-            <Input
-                id = 'Input-Category' 
+            <input
+                className = 'input-category'
                 type = 'text'
                 value = { inputValue }
                 onChange = { handleInputChange }
             />
 
-            {/* <p>{ inputValue }</p> Despues Borrar! */}
+            <p>{ inputValue }</p>
 
-            <DivButton>
+            <div className = 'btn-div'>
 
-            <Button id = 'Button-Category' primary type='submit'>Enviar</Button>
+            <button className = 'btn-primary' type='submit'>Enviar</button>
 
-            <Button id = 'Button-Category' hover type='submit'>Cancelar</Button>
+            <button className = 'btn-secondary' type='submit'>Cancelar</button>
 
-            </DivButton>
+            </div>
 
-        </Form>
+        </form>
         
     );
 };

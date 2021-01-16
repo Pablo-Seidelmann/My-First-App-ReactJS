@@ -1,28 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types'; 
-import styled from 'styled-components';
+
+import './SetCategory.css'
 
 const SetCategory = ({ category }) => {
 
-    const DivList = styled.div`
-        margin-bottom:  20px;
-        text-align: center;
-    `
-
-    const List = styled.li`
-        color: #5e5e5e;
-        font-weight: bold;
-    `
-
     return (
 
-        <DivList>
+        <div className = 'div-list'>
             
-            <List id = 'list-item'>
+            <li className = 'list'>
                 { category }
-            </List>
+            </li>
 
-        </DivList>
+        </div>
 
     );
 };

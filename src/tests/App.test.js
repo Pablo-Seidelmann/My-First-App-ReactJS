@@ -10,9 +10,9 @@ describe('Pruebas al Componente <App />', () => {
 
     beforeEach(() => {
 
-        const Title = 'My First App!';
+        const title = 'My First App!';
 
-        wrapper = shallow( <App Title = { Title } /> );
+        wrapper = shallow( <App title = { title } /> );
 
     })
 
@@ -26,7 +26,7 @@ describe('Pruebas al Componente <App />', () => {
 
     test('El titulo deberia ser el mismo', () => {
         
-        const title = wrapper.find( '#Title-App' );
+        const title = wrapper.find( '.title' );
 
         expect( title.exists() ).toBe( true );
 
@@ -36,12 +36,12 @@ describe('Pruebas al Componente <App />', () => {
 
     test('Debe de haber 2 elementos en el setCategories', () => {
        
-        const Title = 'My First App!';
+        const title = 'My First App!';
 
 
         const categories = ['Pablo', 'El Tula'];
 
-        const wrapper = shallow( <App defaultCategories = { categories } Title = { Title } /> );
+        const wrapper = shallow( <App defaultCategories = { categories } title = { title } /> );
         
         expect( wrapper ).toMatchSnapshot();
 

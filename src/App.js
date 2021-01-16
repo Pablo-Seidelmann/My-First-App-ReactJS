@@ -1,26 +1,19 @@
 import React, { Fragment, useState } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
+import './App.css';
 import AddCategory from './components/AddCategory';
 import SetCategory from './components/SetCategory';
 
-const App = ({ defaultCategories = [] }) => {
+const App = ({ defaultCategories = [], title }) => {
 
   const [ categories, setCategories ] = useState( defaultCategories );
-
-  const Title = styled.h2`
-    color: #38C98D;
-    font-weight: 900px;
-    font-size: 25px;
-    text-align: center;
-  `
 
   return(
 
     <Fragment>
 
-      <Title id = 'Title-App' >My First App!</Title>
+      <h2 className = 'title'>{ title }</h2>
 
       <AddCategory setCategories = { setCategories } />
 
@@ -41,7 +34,11 @@ const App = ({ defaultCategories = [] }) => {
 };
 
 App.propTypes = {
-  Title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired
+}
+
+App.defaultProps = {
+  title: 'My First App!'
 }
 
 export default App;

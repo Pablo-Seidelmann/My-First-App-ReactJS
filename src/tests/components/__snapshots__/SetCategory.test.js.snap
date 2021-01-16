@@ -1,11 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pruebas a el Componente <SetCategory /> SnapShot al Componente 1`] = `
-<styled.div>
-  <styled.li
-    id="list-item"
+<div
+  className="div-list"
+>
+  <li
+    className="list"
   >
     Hola Mundo
-  </styled.li>
-</styled.div>
+  </li>
+</div>
 `;

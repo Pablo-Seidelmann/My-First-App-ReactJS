@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pruebas al Componente <AddCategory /> SnapShot al Componente 1`] = `
-<styled.form
-  id="Form-Category"
+<form
+  className="form-category"
   onSubmit={[Function]}
 >
-  <styled.input
-    id="Input-Category"
+  <input
+    className="input-category"
     onChange={[Function]}
     type="text"
     value="Escribe Aca!"
@@ -14,22 +14,21 @@ exports[`Pruebas al Componente <AddCategory /> SnapShot al Componente 1`] = `
   <p>
     Escribe Aca!
   </p>
-   
-  <styled.div>
-    <styled.button
-      id="Button-Category"
-      primary={true}
+  <div
+    className="btn-div"
+  >
+    <button
+      className="btn-primary"
       type="submit"
     >
       Enviar
-    </styled.button>
-    <styled.button
-      hover={true}
-      id="Button-Category"
+    </button>
+    <button
+      className="btn-secondary"
       type="submit"
     >
       Cancelar
-    </styled.button>
-  </styled.div>
-</styled.form>
+    </button>
+  </div>
+</form>
 `;

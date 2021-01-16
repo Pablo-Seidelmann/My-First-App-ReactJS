@@ -2,11 +2,11 @@
 
 exports[`Pruebas al Componente <App /> Debe de haber 2 elementos en el setCategories 1`] = `
 <Fragment>
-  <styled.h2
-    id="Title-App"
+  <h2
+    className="title"
   >
     My First App!
-  </styled.h2>
+  </h2>
   <AddCategory
     setCategories={[Function]}
   />
@@ -26,11 +26,11 @@ exports[`Pruebas al Componente <App /> Debe de haber 2 elementos en el setCatego
 
 exports[`Pruebas al Componente <App /> Snapshot al Componente Testeado 1`] = `
 <Fragment>
-  <styled.h2
-    id="Title-App"
+  <h2
+    className="title"
   >
     My First App!
-  </styled.h2>
+  </h2>
   <AddCategory
     setCategories={[Function]}
   />

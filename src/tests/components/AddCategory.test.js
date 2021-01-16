@@ -25,13 +25,13 @@ describe('Pruebas al Componente <AddCategory />', () => {
 
         const value = 'Hola Mundo';
 
-        const input = wrapper.find( '#Input-Category' );
+        const input = wrapper.find( '.input-category' );
 
         input.simulate( 'change', { target: { value:value } } );
 
         expect( wrapper.find( 'p' ).text().trim() ).toBe( value );
 
-        const valueInput = wrapper.find( '#Input-Category' ).prop( 'value' );
+        const valueInput = wrapper.find( '.input-category' ).prop( 'value' );
 
         expect( valueInput ).toBe( value );
 
@@ -41,7 +41,7 @@ describe('Pruebas al Componente <AddCategory />', () => {
         
         const value = 'Hola Mundo';
 
-        const change = wrapper.find( '#Input-Category' );
+        const change = wrapper.find( '.input-category' );
 
         change.simulate('change', { target: { value:value } });
 
@@ -51,7 +51,7 @@ describe('Pruebas al Componente <AddCategory />', () => {
     
     test('El form debe de estar de manera correcta', () => {
         
-        wrapper.find( '#Form-Category' ).simulate( 'submit', { preventDefault(){} } );
+        wrapper.find( '.form-category' ).simulate( 'submit', { preventDefault(){} } );
 
         expect( setCategories ).toHaveBeenCalled();
 
@@ -59,7 +59,7 @@ describe('Pruebas al Componente <AddCategory />', () => {
 
     test('Los botones Submit deberian haberse llamado una vez', () => {
         
-        const input = wrapper.find( '#Input-Category' );
+        const input = wrapper.find( '.input-category' );
 
         input.simulate( 'submit' );
 
@@ -71,13 +71,13 @@ describe('Pruebas al Componente <AddCategory />', () => {
         
         const value = 'Hola Mundo';
 
-        wrapper.find('#Input-Category').simulate('change', { target: { value: value } });
+        wrapper.find('.input-category').simulate('change', { target: { value: value } });
 
-        wrapper.find('#Form-Category').simulate('submit', { preventDefault(){} });
+        wrapper.find('.form-category').simulate('submit', { preventDefault(){} });
 
         expect( setCategories ).toHaveBeenCalledTimes( 1 )
 
-        expect( wrapper.find( '#Input-Category' ).prop('value') ).toBe( ' '.trim() )
+        expect( wrapper.find( '.input-category' ).prop('value') ).toBe( ' '.trim() )
 
     });
     

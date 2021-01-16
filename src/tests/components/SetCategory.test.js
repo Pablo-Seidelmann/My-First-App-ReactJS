@@ -16,7 +16,7 @@ describe('Pruebas a el Componente <SetCategory />', () => {
 
     test('Debe de haber una lista y dentro la category', () => {
         
-        const listItem = wrapper.find('#list-item').text().trim();
+        const listItem = wrapper.find('.list').text().trim();
 
         expect( listItem ).toBe( category );
 
