@@ -12,11 +12,11 @@
 
 -- Arquitectura --
 
-1.- Styled Components.
+1.- Styled Components. ✔️
 2.- Props Types. ✔️
 3.- Jsx. ✔️
 4.- Hooks. ✔️
-5.- Testing.
+5.- Testing. ✔️
 
 -- Deploy --
 
@@ -26,5 +26,5 @@
 
 1.- React js. ✔️
 2.- JavaScript. ✔️
-3.- Jest - Enzyme.
-4.- Git.
+3.- Jest - Enzyme. ✔️
+4.- Git. ✔️
