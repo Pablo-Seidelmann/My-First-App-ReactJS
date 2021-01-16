@@ -6,28 +6,28 @@ import swal from 'sweetalert';
 const AddCategory = ({ setCategories }) => {
 
     const Form = styled.form`
-    text-align: center;
-    margin: 50px;
-`
-
-    const Input = styled.input`
-        padding: 40px;
-        border-radius: 20px;
-        border: 1px solid #38C98D;
-        color: grey;
-        font-weight: bold;
+        margin: 50px;
         text-align: center;
-        font-size: 15px;
     `
 
-    const InputButton = styled.button`
-        margin-left: 10px;
-        background-color: ${ props => props.primary ? '#38C98D' : 'grey' };
-        color: #fff;
-        padding: 8px 20px; 
+    const Input = styled.input`
+        color: grey;
+        border-radius: 20px;
+        border: 1px solid #38C98D;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 40px;
+        text-align: center;
+    `
+
+    const Button = styled.button`
         border-radius: 5px;
         border: 1px solid grey;
+        background-color: ${ props => props.primary ? '#38C98D' : 'grey' };
         font-weight: bold;
+        color: #fff;
+        margin-left: 10px;
+        padding: 8px 20px; 
 
         &:hover
         {
@@ -37,23 +37,23 @@ const AddCategory = ({ setCategories }) => {
     `
 
     const DivButton = styled.div`
-        text-align: center;
         position: relative;
+        text-align: center;
         top: 20px;
     `
 
-    const [ inputValue, setInputValue ] = useState('Escribe Aca!');
+    const [ inputValue, setInputValue ] = useState( 'Escribe Aca!' );
 
     const handleInputChange = ( e ) => setInputValue( e.target.value );
 
     const handleSubmit = ( e ) => {
         e.preventDefault();
 
-        if( inputValue.length > 5 ) {
-            setCategories( ( cats ) => [ ...cats, inputValue ] );
-            setInputValue('');
-        } else {
-            swal({
+        if( inputValue.length  > 5 ){
+            setCategories( cats => [ ...cats, inputValue ] );
+            setInputValue( '' );
+         } else {
+             swal({
                 title: "A Ocurrido Algo Inesperado!",
                 text: "Debe haber al menos 5 Caracteres!",
                 icon: "warning",
@@ -64,7 +64,7 @@ const AddCategory = ({ setCategories }) => {
     
     return (
 
-        <Form onSubmit = { handleSubmit } >
+        <Form id = 'Form-Category' onSubmit = { handleSubmit } >
             
             <Input
                 id = 'Input-Category' 
@@ -73,20 +73,23 @@ const AddCategory = ({ setCategories }) => {
                 onChange = { handleInputChange }
             />
 
+            <p>{ inputValue }</p> {/* Despues Borrar! */}
+
             <DivButton>
 
-            <InputButton primary type='submit' >Enviar</InputButton>
+            <Button id = 'Button-Category' primary type='submit'>Enviar</Button>
 
-            <InputButton hover type='reset' >Cancelar</InputButton>
+            <Button id = 'Button-Category' hover type='submit'>Cancelar</Button>
 
             </DivButton>
 
         </Form>
-    )
-}
+        
+    );
+};
 
 AddCategory.propTypes = {
     setCategories: PropTypes.func.isRequired
-}
+};
 
 export default AddCategory;

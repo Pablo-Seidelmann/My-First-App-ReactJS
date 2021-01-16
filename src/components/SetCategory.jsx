@@ -4,31 +4,31 @@ import styled from 'styled-components';
 
 const SetCategory = ({ category }) => {
 
-    const Div = styled.div`
-        text-align: center;
+    const DivList = styled.div`
         margin-bottom:  20px;
+        text-align: center;
     `
 
-    const Li = styled.li`
-        font-weight: bold;
+    const List = styled.li`
         color: #5e5e5e;
+        font-weight: bold;
     `
 
     return (
 
-        <Div>
+        <DivList>
             
-            <Li id = 'list-item'>
+            <List id = 'list-item'>
                 { category }
-            </Li>
+            </List>
 
-        </Div>
+        </DivList>
 
-    )
-}
+    );
+};
 
 SetCategory.propTypes = {
     category: PropTypes.string.isRequired
-}
+};
 
 export default SetCategory;

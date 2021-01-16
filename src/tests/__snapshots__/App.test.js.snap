@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas al Componente <App /> Debe de haber 2 elementos en el setCategories 1`] = `
+<Fragment>
+  <styled.h2
+    id="Title-App"
+  >
+    My First App!
+  </styled.h2>
+  <AddCategory
+    setCategories={[Function]}
+  />
+  <hr />
+  <ol>
+    <SetCategory
+      category="Pablo"
+      key="Pablo"
+    />
+    <SetCategory
+      category="El Tula"
+      key="El Tula"
+    />
+  </ol>
+</Fragment>
+`;
+
+exports[`Pruebas al Componente <App /> Snapshot al Componente Testeado 1`] = `
+<Fragment>
+  <styled.h2
+    id="Title-App"
+  >
+    My First App!
+  </styled.h2>
+  <AddCategory
+    setCategories={[Function]}
+  />
+  <hr />
+  <ol />
+</Fragment>
+`;

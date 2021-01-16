@@ -1,5 +1,5 @@
 import { shallow } from 'enzyme';
-
+import React from 'react';
 import SetCategory from '../../components/SetCategory'; 
 
 describe('Pruebas a el Componente <SetCategory />', () => {

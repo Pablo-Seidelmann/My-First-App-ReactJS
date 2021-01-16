@@ -2,6 +2,7 @@
 
 exports[`Pruebas al Componente <AddCategory /> SnapShot al Componente 1`] = `
 <styled.form
+  id="Form-Category"
   onSubmit={[Function]}
 >
   <styled.input
@@ -10,8 +11,13 @@ exports[`Pruebas al Componente <AddCategory /> SnapShot al Componente 1`] = `
     type="text"
     value="Escribe Aca!"
   />
+  <p>
+    Escribe Aca!
+  </p>
+   
   <styled.div>
     <styled.button
+      id="Button-Category"
       primary={true}
       type="submit"
     >
@@ -19,7 +25,8 @@ exports[`Pruebas al Componente <AddCategory /> SnapShot al Componente 1`] = `
     </styled.button>
     <styled.button
       hover={true}
-      type="reset"
+      id="Button-Category"
+      type="submit"
     >
       Cancelar
     </styled.button>
