@@ -24,7 +24,9 @@ const AddCategory = ({ setCategories }) => {
                 icon: "warning",
                 button: "Ok!",
               });
+    
         };
+
     };
     
     return (
@@ -37,9 +39,7 @@ const AddCategory = ({ setCategories }) => {
                 value = { inputValue }
                 onChange = { handleInputChange }
             />
-
-            <p>{ inputValue }</p>
-
+            
             <div className = 'btn-div'>
 
             <button className = 'btn-primary' type='submit'>Enviar</button>
